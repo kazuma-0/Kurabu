@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-color: #101014 !important;
+    color: #f4f1d0 !important;
+}
+
+@font-face {
+    src: url("../assets/fonts/Ligurino Regular.ttf");
+    font-family: Ligurino;
+}
+.font-ligurino{
+    font-family: Ligurino, serif;
+}
