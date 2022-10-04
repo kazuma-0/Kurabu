@@ -9,7 +9,9 @@ import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import "../styles/globals.css";
 import "@solana/wallet-adapter-react-ui/styles.css";
 import { useMemo } from "react";
-import { ChakraProvider } from "@chakra-ui/react";
+import {ChakraProvider, Container} from "@chakra-ui/react";
+import NavigationBar from "../components/NavigationBar";
+import Footer from "../components/Footer";
 function MyApp({ Component, pageProps }) {
   const network = WalletAdapterNetwork.Devnet;
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
@@ -19,7 +21,11 @@ function MyApp({ Component, pageProps }) {
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
           <ChakraProvider>
-            <Component {...pageProps}></Component>
+            <NavigationBar/>
+            <Container maxW={"container.lg"}>
+              <Component {...pageProps}></Component>
+            </Container>
+            <Footer/>
           </ChakraProvider>
         </WalletModalProvider>
       </WalletProvider>
