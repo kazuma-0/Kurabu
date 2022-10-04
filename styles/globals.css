@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: #101014 !important;
-    color: #f4f1d0 !important;
+
+:root{
+    --height: 176px; /*7rem*/
 }
+/*body{*/
+/*    background-color: #101014 !important;*/
+/*    color: #f4f1d0 ;*/
+/*}*/
 
 @font-face {
     src: url("../assets/fonts/Ligurino Regular.ttf");
@@ -13,4 +17,8 @@ body{
 }
 .font-ligurino{
     font-family: Ligurino, serif;
+}
+
+.h-cover{
+    height: calc(100vh - var(--height));
 }
