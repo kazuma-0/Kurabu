@@ -1,10 +1,17 @@
-import {Center} from "@chakra-ui/react";
+import {Center, useColorMode} from "@chakra-ui/react";
 import Programmer from "../assets/Programmer";
 import arvr from '../assets/club_images/arvr.png'
 import blockchain from '../assets/club_images/blockchain.png'
 import datascience from '../assets/club_images/datascience.png'
+import {useEffect} from "react";
 
 export default function Home() {
+    const {colorMode, toggleColorMode} = useColorMode()
+   useEffect(()=>{
+       if(colorMode === "light"){
+           toggleColorMode();
+       }
+   }, [])
     return <>
         <Center className="flex flex-col-reverse lg:flex-row h-[calc(100vh_-_7rem)]">
             <div className={"flex-1"}>
