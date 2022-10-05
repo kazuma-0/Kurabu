@@ -74,6 +74,7 @@ function Register() {
     }, [publicKey])
     const [formState, dispatch] = useReducer(signUpFormReducer, formInitialState);
     const [loading, setLoading] = useState(false);
+    const [loadingSignUp, setLoadingSignUp] = useState(false);
     const [code, setCode] = useState("");
     const [valid, setValid] = useState(false);
     const toast = useToast({
@@ -150,9 +151,38 @@ function Register() {
         })
     }, [])
 
+    async function signUp(){
+        setLoadingSignUp(true)
+        try{
+            const {data} = await frontendClient.post("/sign-up", {
+                name: formState.name,
+                department:formState.department,
+                branch:formState.branch,
+                roll_number: formState.roll_number,
+                pubKey:formState.pubKey,
+                email:formState.email,
+                role:formState.role
+            })
+            console.log(data);
+            setLoadingSignUp(false)
+            toast({
+                title: "Account created successfully",
+                description: "Redirecting to dashboard in 3 seconds.",
+                status: "success"
+            })
+        }
+        catch (e){
+            console.log(e)
+            toast({
+                title: "Signup failed",
+                description: e.response.data.message,
+                status:"error"
+            })
+            setLoadingSignUp(false)
+        }
+    }
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(e.target)
     }
 
     function handleInput(e){
@@ -200,7 +230,7 @@ function Register() {
                         </Select>
 
                     </FormControl>
-                    <Button type={"submit"} colorScheme={"twitter"}>Sign up</Button>
+                    <Button isLoading={loadingSignUp} onClick={signUp} colorScheme={"twitter"}>Sign up</Button>
                 </form>
             </Center>
         </div>
