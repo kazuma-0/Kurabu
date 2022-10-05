@@ -4,7 +4,7 @@
 
 
 :root{
-    --height: 176px; /*7rem*/
+    --height: 7rem; /*176px*/
 }
 /*body{*/
 /*    background-color: #101014 !important;*/
@@ -15,10 +15,36 @@
     src: url("../assets/fonts/Ligurino Regular.ttf");
     font-family: Ligurino;
 }
+
+@font-face {
+    src: url("../assets/fonts/Droid Sans Mono Regular.ttf");
+    font-family: "Droid Sans";
+}
 .font-ligurino{
     font-family: Ligurino, serif;
 }
 
+.font-droid{
+    font-family: "Droid Sans", monospace;
+}
+
 .h-cover{
     height: calc(100vh - var(--height));
+}
+
+.test-anim{
+    animation: load linear 200ms alternate;
+    transform-origin: left;
+}
+
+@keyframes load {
+    from{
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    to{
+        opacity: 1;
+        /*transform: scaleX(0) perspective(1000px) scale3d(0, 0 1);*/
+        transform: scaleX(100%);
+    }
 }
