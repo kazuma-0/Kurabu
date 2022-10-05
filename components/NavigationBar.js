@@ -34,8 +34,8 @@ function NavigationBar(){
         <div className="flex space-x-8">
             {
                 links.map(link=>{
-                    return <div key={link.label} className={"text-lg uppercase tracking-wide font-ligurino font-light"}>
-                        <Link href={link.url}>
+                    return <div key={link.label} className={"text-md uppercase tracking-wide font-droid font-light"}>
+                        <Link href={link.url} scroll={false}>
                             {link.label}
                         </Link>
                     </div>
