@@ -7,17 +7,24 @@ import {useEffect} from "react";
 
 export default function Home() {
     const {colorMode, toggleColorMode} = useColorMode()
-   useEffect(()=>{
-       if(colorMode === "light"){
-           toggleColorMode();
-       }
-   }, [])
+    useEffect(() => {
+        if (colorMode === "light") {
+            toggleColorMode();
+        }
+    }, [])
     return <>
-        <Center className="flex flex-col-reverse lg:flex-row h-[calc(100vh_-_7rem)]">
-            <div className={"flex-1"}>
-                TBD
+        <Center className="flex flex-col-reverse items-start !justify-between lg:flex-row h-[calc(100vh_-_7rem)]">
+            <div className={"flex-[.6]"}>
+                <div
+                    className="text-4xl font-extrabold text-center lg:text-left pt-5 lg:text-6xl tracking-wide uppercase">
+                    the <span className="text-[#f4f1d0] selection:text-[#101014] selection:bg-[#f4f1d0]">metaverse community</span>
+                </div>
+                <p className="text-lg pt-3 text-justify max-w-lg">
+                    A community of students with a common interest in different sectors of Computer based Tech. The main
+                    motive of this club is to learn, implement, and publish.
+                </p>
             </div>
-            <Programmer className={"lg:scale-150"}/>
+            <Programmer className={"lg:scale-150 flex-[.3]"}/>
         </Center>
         <div className="grid lg:grid-cols-3 min-h-screen gap-4">
             <div className="h-fit rounded p-4 shadow-xl bg-[#16171d] hover:ring-2">
