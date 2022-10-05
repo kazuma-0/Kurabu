@@ -11,19 +11,23 @@ function Login() {
     const [_, setUser] = useLocalStorage("user", null);
     const toast = useToast({
         position: 'bottom-right',
-
     })
     async function onWalletConnected() {
         try {
             const {data} = await frontendClient.post('login', {
                 pubKey: publicKey
             });
-            console.log(data)
-            setUser(data);
+            // console.log(data)
+            // setUser(data);
             toast({
                 title: "Successfully logged in",
-                status: "success",variant: "left-accent"
+                description: "Redirecting to dashboard in 3s",
+                status: "success",variant: "left-accent",
+                duration: 2e3,
             })
+            setTimeout(()=>{
+                router.push('/dashboard')
+            }, 3e3)
         } catch (e) {
             toast({
                 title: "User not in club.",
