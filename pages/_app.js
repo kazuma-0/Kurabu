@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
         <WalletModalProvider>
           <ChakraProvider theme={theme}>
             <NavigationBar/>
-            <Container maxW={"container.lg"} className={"text-[#f4f1d0]"}>
+            <Container maxW={"container.lg"}>
               <Component {...pageProps}></Component>
             </Container>
             <Footer/>
