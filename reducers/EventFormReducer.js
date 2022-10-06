@@ -1,40 +1,44 @@
 const signUpFormReducer = (state, action) => {
     switch (action.type) {
-        case "TITLE":
+        case "title":
             return {
                 ...state, [action.field]: action.payload
             }
-        case "IMAGE":
+        case "image_url":
             return {
                 ...state, [action.field]: action.payload
             }
-        case "TAGS":
+        case "tags":
             return {
                 ...state, [action.field]: action.payload
             }
-        case "SHORT_DESCRIPTION":
+        case "short_description":
             return {
                 ...state, [action.field]: action.payload
             }
-        case "DESCRIPTION":
+        case "description":
             return {
                 ...state, [action.field]: action.payload
             }
-        case "MARKDOWN":
+        case "markdown":
             return {
                 ...state, [action.field]: action.payload
             }
-        case "STYLES":
+        case "styles":
             return {
                 ...state, [action.field]: action.payload
             }
-        case "AUTHOR":
+        case "author":
             return {
                 ...state, [action.field]: action.payload
             }
-        case "PUBLIC KEY":
+        case "public key":
             return {
                 ...state, [action.field]: action.payload
+            }
+        default:
+            return{
+                ...state,
             }
     }
 }
