@@ -10,7 +10,13 @@ import {ChakraProvider, Container} from "@chakra-ui/react";
 import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 import theme from "../chakra/theme";
-import '../styles/unreset.css'
+import "../styles/unreset.css";
+import dayjs from "dayjs";
+import localizedFormat from 'dayjs/plugin/localizedFormat';
+import relativeTime from 'dayjs/plugin/relativeTime';
+
+dayjs.extend(localizedFormat);
+dayjs.extend(relativeTime);
 
 function MyApp({Component, pageProps, router}) {
     const network = WalletAdapterNetwork.Devnet;
