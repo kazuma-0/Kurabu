@@ -4,7 +4,6 @@ function checkUser(publicKey, setUser) {
     frontendClient.post('/getUser', {
         pubKey: publicKey?.toBase58()
     }).then(({data}) => {
-        console.log(data)
         setUser(data);
     }).catch((e) => {
         console.log("This error should not occur.")
