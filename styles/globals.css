@@ -29,7 +29,7 @@
 }
 
 .h-cover{
-    height: calc(100vh - var(--height));
+    min-height: calc(100vh - var(--height));
 }
 
 .test-anim{
