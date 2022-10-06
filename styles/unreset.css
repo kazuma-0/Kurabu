@@ -30,32 +30,32 @@
 .unreset h1 {
     font-size: 2em;
     font-weight: bold;
-    margin: 0.67em 0;
+    margin-bottom: 0.67em;
 }
 .unreset h2 {
     font-size: 1.5em;
     font-weight: bold;
-    margin: 0.83em 0;
+    margin-bottom: 0.83em;
 }
 .unreset h3 {
     font-size: 1.17em;
     font-weight: bold;
-    margin: 1em 0;
+    margin-bottom: 1em;
 }
 .unreset h4 {
     font-size: 1em;
     font-weight: bold;
-    margin: 1.33em 0;
+    margin-bottom: 1.33em;
 }
 .unreset h5 {
     font-size: 0.83em;
     font-weight: bold;
-    margin: 1.67em 0;
+    margin-bottom: 1.67em;
 }
 .unreset h6 {
     font-size: 0.67em;
     font-weight: bold;
-    margin: 2.33em 0;
+    margin-bottom: 2.33em;
 }
 .unreset article h1,
 .unreset aside h1,
