@@ -1,15 +1,14 @@
-import { marked } from 'marked';
+import { marked } from "marked";
+
 function MdViewer(props) {
-    return (
-        // <TabPanel>
-        <div
-            className='unreset'
-            dangerouslySetInnerHTML={{
-                __html: `${marked(props.markdown)} <style>${props.css}</style>`,
-            }}
-        ></div>
-        // </TabPanel>
-    );
+  return (
+    <div
+      className="unreset"
+      dangerouslySetInnerHTML={{
+        __html: `${marked(props.markdown)} <style>${props.css}</style>`,
+      }}
+    ></div>
+  );
 }
 
 export default MdViewer;
