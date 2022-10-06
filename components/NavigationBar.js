@@ -1,48 +1,56 @@
-import {Container} from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 import Link from "next/link";
-import metaverse from '../assets/logo.png'
+import metaverse from "../assets/logo.png";
 const links = [
-    {
-        label: "clubs",
-        url: "/#clubs"
-    },
+  {
+    label: "clubs",
+    url: "/#clubs",
+  },
 
-    {
-        label: "events",
-        url: "/events"
-    },
+  {
+    label: "events",
+    url: "/events",
+  },
 
-    {
-        label: "blog",
-        url: "/blog"
-    },
-    {
-        label: "login",
-        url: "/auth"
-    }
+  {
+    label: "blog",
+    url: "/blog",
+  },
+  {
+    label: "login",
+    url: "/auth",
+  },
+];
 
-]
-
-
-function NavigationBar(){
-    return <Container maxW={"container.xl"} className={"h-28 flex justify-between items-center"}>
-        <Link href={'/'}>
-            <div className={"cursor-pointer"}>
-                <img src={metaverse.src} width={"100px"} alt=""/>
-            </div>
-        </Link>
-        <div className="flex space-x-8">
-            {
-                links.map(link=>{
-                    return <div key={link.label} className={"text-md uppercase tracking-wide font-droid font-light"}>
-                        <Link href={link.url} scroll={false}>
-                            {link.label}
-                        </Link>
-                    </div>
-                })
-            }
+function NavigationBar() {
+  return (
+    <Container
+      maxW={"container.xl"}
+      className={"h-28 flex justify-between items-center"}
+    >
+      <Link href={"/"}>
+        <div className={"cursor-pointer"}>
+          <img src={metaverse.src} width={"100px"} alt="" />
         </div>
+      </Link>
+      <div className="flex space-x-8">
+        {links.map((link) => {
+          return (
+            <div
+              key={link.label}
+              className={
+                "text-md uppercase tracking-wide font-droid font-light"
+              }
+            >
+              <Link href={link.url} scroll={false}>
+                {link.label}
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </Container>
+  );
 }
 
-export default  NavigationBar;
+export default NavigationBar;
