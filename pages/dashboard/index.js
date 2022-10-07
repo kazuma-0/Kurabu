@@ -47,16 +47,16 @@ function Dashboard() {
       <h1 className={"text-2xl uppercase"}>User area</h1>
       <hr className={"mt-2"} />
       <div className="grid grid-cols-4 py-5 gap-5">
-        <MenuOption link={"/"} icon={<IconPlus />} text={"New event post"} />
+        <MenuOption link={"/"} icon={<IconPlus />} text={"New blog post"} />
         <MenuOption
           link={"/"}
           icon={<IconFilePencil />}
-          text={"Edit event post"}
+          text={"Edit blog post"}
         />
         <MenuOption
           link={"/"}
           icon={<IconTrash />}
-          text={"Delete event post"}
+          text={"Delete blog post"}
         />
       </div>
 
@@ -71,11 +71,11 @@ function Dashboard() {
               text={"New event"}
             />
             <MenuOption
-              link={"/"}
+              link={"dashboard/event/edit"}
               icon={<IconFilePencil />}
               text={"Edit event"}
             />
-            <MenuOption link={"/"} icon={<IconTrash />} text={"Delete Event"} />
+            <MenuOption link={"/dashboard/event/delete"} icon={<IconTrash />} text={"Delete Event"} />
             <MenuOption
               link={"/"}
               icon={<IconEditCircle />}
