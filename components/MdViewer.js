@@ -1,9 +1,9 @@
-import { marked } from "marked";
+import {marked} from "marked";
 
 function MdViewer(props) {
-  return (
+    return (
     <div
-      className="unreset"
+      className="unreset viewer"
       dangerouslySetInnerHTML={{
         __html: `${marked(props.markdown)} <style>${props.css}</style>`,
       }}
