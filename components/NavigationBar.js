@@ -24,7 +24,7 @@ const links = [
 
 function NavigationBar() {
   return (
-    <Container
+    <Container id={"nav"}
       maxW={"container.xl"}
       className={"h-28 flex justify-between items-center"}
     >

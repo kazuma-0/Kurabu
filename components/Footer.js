@@ -2,7 +2,7 @@ import { Button, Container } from "@chakra-ui/react";
 
 function Footer() {
   return (
-    <Container maxW={"container.lg"} className={"py-5 font-mono"}>
+    <Container id={"footer"} maxW={"container.lg"} className={"py-5 font-mono"}>
       ©️{" "}
       <a
         href={"https://github.com/kazuma-0"}
