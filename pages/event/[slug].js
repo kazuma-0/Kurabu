@@ -5,6 +5,7 @@ import MdViewer from "../../components/MdViewer";
 import dayjs from "dayjs";
 import readingTime from "reading-time";
 import {IconHeart} from "@tabler/icons";
+import {Tag} from "@chakra-ui/react";
 
 function Event() {
     const router = useRouter()
@@ -55,16 +56,24 @@ function Event() {
                     <span>•</span>
                     <h3>
                         {
-                            dayjs.unix(Math.floor(Number(event.created_at) / 1000)).format("ll")
+                            dayjs.unix(Math.floor(Date.parse(event.created_at) / 1000)).format("ll")
                         }
                     </h3>
                 </div>
                 <div className={"flex items-center"} onClick={LikeEvent}>
-                    <IconHeart color={like.liked ? "red" : "white"} fill={like.liked ? "red" : "white"} size={40}/>
+                    <IconHeart color={like.liked ? "red" : "white"} fill={like.liked ? "red" : "white"} siz/>
                     <p className={"pl-1 text-xl"}>
                         {like.count}
                     </p>
                 </div>
+            </div>
+            <div className={"text-xs space-x-1 pt-1 font-droid"}>
+                {
+                    event.tags.split(',').map(tag => <Tag size={"sm"} colorScheme={"linkedin"} key={tag}>
+                            {tag}
+                        </Tag>
+                    )
+                }
             </div>
             <MdViewer css={event.styles} markdown={event.markdown}></MdViewer>
         </>
