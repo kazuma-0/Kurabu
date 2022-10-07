@@ -42,5 +42,18 @@ const signUpFormReducer = (state, action) => {
             }
     }
 }
+const initialEventForm = {
+    title: "",
+    image_url: "",
+    tags: "",
+    description: "",
+    markdown: "",
+    styles: "",
+    author: "",
+    pubKey: "",
+};
 
+export {
+    initialEventForm
+}
 export default signUpFormReducer ;
