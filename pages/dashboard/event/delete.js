@@ -95,10 +95,10 @@ function Delete() {
             <AlertDialogOverlay>
                 <AlertDialogContent>
                     <AlertDialogHeader>
-                        Delete "{event?.title}"
+                        Delete &quot;{event?.title} &quot;
                     </AlertDialogHeader>
                     <AlertDialogBody>
-                        Are you sure? You can't undo this action afterwards.
+                        Are you sure? You can&quot;t undo this action afterwards.
                     </AlertDialogBody>
                     <AlertDialogFooter>
                         <Button ref={leastRef} onClick={onClose}>
