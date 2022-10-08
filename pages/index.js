@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Center, useColorMode } from "@chakra-ui/react";
 import Programmer from "../assets/Programmer";
 import arvr from "../assets/club_images/arvr.png";
