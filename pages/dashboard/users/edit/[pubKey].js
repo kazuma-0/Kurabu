@@ -118,7 +118,7 @@ function EditUser() {
                 status:"success",
                 duration: 3e3
             })
-            router.push('http://localhost:3001/dashboard/users/edit')
+            router.push('/dashboard/users/edit')
         } catch (e) {
             console.log(e)
             toast({
