@@ -53,11 +53,7 @@ function Dashboard() {
           icon={<IconFilePencil />}
           text={"Edit blog post"}
         />
-        <MenuOption
-          link={"/"}
-          icon={<IconTrash />}
-          text={"Delete blog post"}
-        />
+        <MenuOption link={"/"} icon={<IconTrash />} text={"Delete blog post"} />
       </div>
 
       {user?.role === "Executive" || user?.role === "Teacher" ? (
@@ -75,31 +71,20 @@ function Dashboard() {
               icon={<IconFilePencil />}
               text={"Edit event"}
             />
-            <MenuOption link={"/dashboard/event/delete"} icon={<IconTrash />} text={"Delete Event"} />
             <MenuOption
-              link={"/"}
+              link={"/dashboard/event/delete"}
+              icon={<IconTrash />}
+              text={"Delete Event"}
+            />
+            <MenuOption
+              link={"/dashboard/users/edit"}
               icon={<IconEditCircle />}
               text={"Edit club member"}
             />
             <MenuOption
-              link={"/"}
-              icon={<IconTrashOff />}
-              text={"Remove club member"}
-            />
-            <MenuOption
-              link={"/"}
+              link={"/dashboard/invite"}
               icon={<IconCodePlus />}
-              text={"New Invite code"}
-            />
-            <MenuOption
-              link={"/"}
-              icon={<IconCodeCircle2 />}
-              text={"New Invite code (batch)"}
-            />
-            <MenuOption
-              link={"/"}
-              icon={<IconBarcode />}
-              text={"All Invite codes"}
+              text={"Invite code"}
             />
           </div>
         </>
