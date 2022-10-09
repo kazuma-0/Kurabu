@@ -11,7 +11,7 @@ import {
     Tabs,
     Textarea,
 } from "@chakra-ui/react";
-import CSSEditor from "./CSSEditor";
+import CSSEditor from "./CssEditor";
 import HtmlEditor from "./HtmlEditor";
 import MdViewer from "./MdViewer";
 import {useWallet} from "@solana/wallet-adapter-react";
