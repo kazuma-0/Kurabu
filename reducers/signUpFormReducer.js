@@ -1,34 +1,55 @@
 const signUpFormReducer = (state, action) => {
-    switch (action.type) {
-        case "NAME":
-            return {
-                ...state, [action.field]: action.payload
-            }
-        case "DEPT":
-            return {
-                ...state, [action.field]: action.payload
-            }
-        case "BRANCH":
-            return {
-                ...state, [action.field]: action.payload
-            }
-        case "ROLL NO":
-            return {
-                ...state, [action.field]: action.payload
-            }
-        case "PUBLIC KEY":
-            return {
-                ...state, [action.field]: action.payload
-            }
-        case "EMAIL":
-            return {
-                ...state, [action.field]: action.payload
-            }
-        case "ROLE":
-            return {
-                ...state, [action.field]: action.payload
-            }
-    }
-}
+  switch (action.type) {
+    case "name":
+      return {
+        ...state,
+        [action.field]: action.payload,
+      };
+    case "department":
+      return {
+        ...state,
+        [action.field]: action.payload,
+      };
+    case "branch":
+      return {
+        ...state,
+        [action.field]: action.payload,
+      };
+    case "roll_number":
+      return {
+        ...state,
+        [action.field]: action.payload,
+      };
+    case "pubKey":
+      return {
+        ...state,
+        [action.field]: action.payload,
+      };
+    case "email":
+      return {
+        ...state,
+        [action.field]: action.payload,
+      };
+    case "role":
+      return {
+        ...state,
+        [action.field]: action.payload,
+      };
+    default:
+      return {
+        ...state,
+      }
+  }
+};
+const formInitialState = {
+  name: "",
+  department: "",
+  branch: "",
+  roll_number: "",
+  pubKey: "",
+  email: "",
+  role: "",
+};
 
-export default signUpFormReducer ;
+export { formInitialState };
+export default signUpFormReducer;
