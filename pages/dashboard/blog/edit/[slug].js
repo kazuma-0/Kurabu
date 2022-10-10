@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useReducer, useState } from "react";
 import { frontendClient } from "../../../../client";
-import BlogFormReducer from "../../../../reducers/blogFormReducer";
+import BlogFormReducer from "../../../../reducers/BlogFormReducer";
 import { useRouter } from "next/router";
 import EditorLayout from "../../../../components/EditorLayout";
 import { IconLoader } from "@tabler/icons";

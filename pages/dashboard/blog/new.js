@@ -4,12 +4,11 @@ import { useRouter } from "next/router";
 import { useToast } from "@chakra-ui/react";
 import { useWallet } from "@solana/wallet-adapter-react";
 import EditorLayout from "../../../components/EditorLayout";
-import blogFormReducer, {
+import BlogFormReducer, {
   initialBlogForm,
-} from "../../../reducers/blogFormReducer";
+} from "../../../reducers/BlogFormReducer";
 import { frontendClient } from "../../../client";
 import { IconLoader } from "@tabler/icons";
-import BlogFormReducer from "../../../reducers/blogFormReducer";
 
 function Newblog() {
   const toast = useToast({
