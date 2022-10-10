@@ -182,7 +182,7 @@ export default function Home() {
             passionate about innovation and technology. In sectors like
             artificial intelligence and machine learning, blockchain, AR/VR,
             computer technology, along with app and web development, we
-            brainstorm and explore initiatives that are pertinent to today's
+            brainstorm and explore initiatives that are pertinent to today&aposs
             industry.
           </p>
         </div>
