@@ -38,7 +38,7 @@ const signUpFormReducer = (state, action) => {
     default:
       return {
         ...state,
-      }
+      };
   }
 };
 const formInitialState = {

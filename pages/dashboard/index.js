@@ -47,13 +47,21 @@ function Dashboard() {
       <h1 className={"text-2xl uppercase"}>User area</h1>
       <hr className={"mt-2"} />
       <div className="grid grid-cols-4 py-5 gap-5">
-        <MenuOption link={"/"} icon={<IconPlus />} text={"New blog post"} />
         <MenuOption
-          link={"/"}
+          link={"dashboard/blog/new/"}
+          icon={<IconPlus />}
+          text={"New blog post"}
+        />
+        <MenuOption
+          link={"/dashboard/blog/edit"}
           icon={<IconFilePencil />}
           text={"Edit blog post"}
         />
-        <MenuOption link={"/"} icon={<IconTrash />} text={"Delete blog post"} />
+        <MenuOption
+          link={"/dashboard/blog/delete"}
+          icon={<IconTrash />}
+          text={"Delete blog post"}
+        />
       </div>
 
       {user?.role === "Executive" || user?.role === "Teacher" ? (

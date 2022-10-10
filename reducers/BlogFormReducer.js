@@ -1,11 +1,21 @@
-const achievementFormReducer = (state, action) => {
+const BlogFormReducer = (state, action) => {
   switch (action.type) {
     case "title":
       return {
         ...state,
         [action.field]: action.payload,
       };
-    case "type":
+    case "image_url":
+      return {
+        ...state,
+        [action.field]: action.payload,
+      };
+    case "tags":
+      return {
+        ...state,
+        [action.field]: action.payload,
+      };
+    case "short_description":
       return {
         ...state,
         [action.field]: action.payload,
@@ -15,7 +25,12 @@ const achievementFormReducer = (state, action) => {
         ...state,
         [action.field]: action.payload,
       };
-    case "image":
+    case "markdown":
+      return {
+        ...state,
+        [action.field]: action.payload,
+      };
+    case "styles":
       return {
         ...state,
         [action.field]: action.payload,
@@ -25,7 +40,7 @@ const achievementFormReducer = (state, action) => {
         ...state,
         [action.field]: action.payload,
       };
-    case "duration":
+    case "public key":
       return {
         ...state,
         [action.field]: action.payload,
@@ -36,14 +51,16 @@ const achievementFormReducer = (state, action) => {
       };
   }
 };
-const initialAchievementForm = {
+const initialBlogForm = {
   title: "",
-  author: "",
-  duration: "",
-  type: "",
+  image_url: "",
+  tags: "",
   description: "",
-  image: "",
+  markdown: "",
+  styles: "",
+  author: "",
+  pubKey: "",
 };
 
-export { initialAchievementForm };
-export default achievementFormReducer;
+export { initialBlogForm };
+export default BlogFormReducer;

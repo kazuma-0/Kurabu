@@ -2,7 +2,11 @@ import { Button, Container } from "@chakra-ui/react";
 
 function Footer() {
   return (
-    <Container id={"footer"} maxW={"container.lg"} className={"py-5 font-mono"}>
+    <Container
+      id={"footer"}
+      maxW={"container.lg"}
+      className={"py-5 text-xs font-mono"}
+    >
       ©️{" "}
       <a
         href={"https://github.com/kazuma-0"}
@@ -12,7 +16,7 @@ function Footer() {
         <Button
           colorScheme={""}
           variant={"link"}
-          size={"sm"}
+          size={"xs"}
           fontWeight={"light"}
         >
           ANUJ S
@@ -23,7 +27,7 @@ function Footer() {
         <Button
           variant={"link"}
           colorScheme={""}
-          size={"sm"}
+          size={"xs"}
           fontWeight={"light"}
         >
           CONTACT

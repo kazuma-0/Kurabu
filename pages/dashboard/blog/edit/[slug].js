@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useReducer, useState } from "react";
 import { frontendClient } from "../../../../client";
-import EventFormReducer from "../../../../reducers/EventFormReducer";
+import BlogFormReducer from "../../../../reducers/blogFormReducer";
 import { useRouter } from "next/router";
 import EditorLayout from "../../../../components/EditorLayout";
 import { IconLoader } from "@tabler/icons";
@@ -8,8 +8,8 @@ import { useToast } from "@chakra-ui/react";
 import { checkUser } from "../../../../utils";
 import { useWallet } from "@solana/wallet-adapter-react";
 
-function EventEdit() {
-  const [event, setEvent] = useState({});
+function BlogEdit() {
+  const [blogPost, setBlogPost] = useState({});
   const router = useRouter();
   const { slug } = router.query;
   const toast = useToast({
@@ -37,8 +37,8 @@ function EventEdit() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await frontendClient.get(`event/event?slug=${slug}`);
-        setEvent(data);
+        const { data } = await frontendClient.get(`blog/blog?slug=${slug}`);
+        setBlogPost(data);
         console.log(data);
         const keys = Object.keys(data);
         keys.forEach((key) => {
@@ -59,8 +59,9 @@ function EventEdit() {
     }
   }, [slug]);
 
-  const [formState, dispatch] = useReducer(EventFormReducer, event);
+  const [formState, dispatch] = useReducer(BlogFormReducer, blogPost);
   const dispatcher = useCallback((e) => {
+    console.log(e.target.value);
     dispatch({
       type: e.target.name,
       field: e.target.name,
@@ -71,9 +72,9 @@ function EventEdit() {
   async function onSubmit() {
     try {
       const { data } = await frontendClient.post(
-        "/event/update",
+        "/blog/update",
         {
-          ...{ ...event, ...formState },
+          ...{ ...blogPost, ...formState },
         },
         {}
       );
@@ -85,7 +86,7 @@ function EventEdit() {
         duration: 1e3,
       });
       setTimeout(() => {
-        router.push(`/event/${data.slug}`);
+        router.push(`/blog/${data.slug}`);
       }, 1e3);
     } catch (e) {
       console.error(e);
@@ -104,9 +105,9 @@ function EventEdit() {
           "text-4xl uppercase font-bold font-ligurino tracking-wider pb-5"
         }
       >
-        Edit event
+        Edit blog post
       </h1>
-      {event.image_url && (
+      {blogPost.image_url && (
         <EditorLayout
           dispatcher={dispatcher}
           state={formState}
@@ -118,4 +119,4 @@ function EventEdit() {
   );
 }
 
-export default EventEdit;
+export default BlogEdit;

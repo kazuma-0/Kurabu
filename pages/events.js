@@ -1,9 +1,8 @@
 import EventViewer from "../components/EventViewer";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
 function Events() {
-
-    return <EventViewer link={"/event/"}/>
+  return <EventViewer link={"/event/"} />;
 }
 
 export default Events;

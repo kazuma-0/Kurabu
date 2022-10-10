@@ -1,7 +1,7 @@
-import {marked} from "marked";
+import { marked } from "marked";
 
 function MdViewer(props) {
-    return (
+  return (
     <div
       className="unreset viewer"
       dangerouslySetInnerHTML={{

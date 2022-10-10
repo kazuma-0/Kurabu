@@ -4,13 +4,14 @@ import { useRouter } from "next/router";
 import { useToast } from "@chakra-ui/react";
 import { useWallet } from "@solana/wallet-adapter-react";
 import EditorLayout from "../../../components/EditorLayout";
-import EventFormReducer, {
-  initialEventForm,
-} from "../../../reducers/EventFormReducer";
+import blogFormReducer, {
+  initialBlogForm,
+} from "../../../reducers/blogFormReducer";
 import { frontendClient } from "../../../client";
 import { IconLoader } from "@tabler/icons";
+import BlogFormReducer from "../../../reducers/blogFormReducer";
 
-function NewEvent() {
+function Newblog() {
   const toast = useToast({
     position: "bottom-right",
     variant: "left-accent",
@@ -44,7 +45,7 @@ function NewEvent() {
     }
   }, [publicKey, user]);
 
-  const [formState, dispatch] = useReducer(EventFormReducer, initialEventForm);
+  const [formState, dispatch] = useReducer(BlogFormReducer, initialBlogForm);
 
   const dispatcher = useCallback((e) => {
     console.log(e.target.value);
@@ -72,7 +73,7 @@ function NewEvent() {
 
   async function onSubmit() {
     try {
-      const { data } = await frontendClient.post("/event/new", {
+      const { data } = await frontendClient.post("/blog/new", {
         ...formState,
       });
       toast({
@@ -83,7 +84,7 @@ function NewEvent() {
         duration: 1e3,
       });
       setTimeout(() => {
-        router.push(`/event/${data.slug}`);
+        router.push(`/blog/${data.slug}`);
       }, 1e3);
     } catch (e) {
       toast({
@@ -101,7 +102,7 @@ function NewEvent() {
           "text-4xl uppercase font-bold font-ligurino tracking-wider pb-5"
         }
       >
-        New Event
+        New blog post
       </h1>
       <EditorLayout
         dispatcher={dispatcher}
@@ -113,4 +114,4 @@ function NewEvent() {
   );
 }
 
-export default NewEvent;
+export default Newblog;

@@ -34,39 +34,39 @@ function Delete() {
     variant: "left-accent",
   });
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [event, setEvent] = useState(null);
-  const [events, setEvents] = useState(null);
+  const [blog, setBlog] = useState(null);
+  const [blogPosts, setBlogPosts] = useState(null);
 
-  async function fetchEvents() {
-    const { data } = await frontendClient.get("event/all");
-    setEvents(data);
+  async function fetchBlogPosts() {
+    const { data } = await frontendClient.get("blog/all");
+    setBlogPosts(data);
   }
 
   useEffect(() => {
-    fetchEvents();
+    fetchBlogPosts();
   }, []);
   const leastRef = useRef();
 
   function onClickDelete(id) {
-    setEvent(events.find((_event) => _event.id === id));
+    setBlog(blogPosts.find((_blogPost) => _blogPost.id === id));
     onOpen();
   }
 
-  async function deleteEvent() {
+  async function deleteblogPost() {
     try {
-      const { status } = await frontendClient.post("event/delete", {
-        id: event.id,
+      const { status } = await frontendClient.post("blog/delete", {
+        id: blog.id,
         pubKey: publicKey.toBase58(),
       });
       toast({
-        title: "Event deleted successfully",
+        title: "blog post deleted successfully",
         status: "success",
       });
-      fetchEvents();
+      fetchBlogPosts();
       onClose();
     } catch (e) {
       toast({
-        title: "Unable to delete event",
+        title: "Unable to delete blog post",
         status: "error",
       });
       onClose();
@@ -76,19 +76,19 @@ function Delete() {
   return (
     <div className={"h-cover"}>
       <Container maxW={"container.sm"}>
-        {events?.map((event) => (
+        {blogPosts?.map((blog) => (
           <div
-            key={event.id}
+            key={blog.id}
             className={
               "h-24 rounded-lg shadow-lg ring-1 ring-white/30 hover:ring-white/80 transition-all px-5 bg-[#16171d] flex items-center justify-between"
             }
           >
             <h3 className={"text-2xl flex items-center font-bold"}>
-              {event.title} - {event.author}
+              {blog.title} - {blog.author}
             </h3>
             <IconButton
               onClick={() => {
-                onClickDelete(event.id);
+                onClickDelete(blog.id);
               }}
               aria-label={"delete"}
               variant={"outline"}
@@ -105,7 +105,7 @@ function Delete() {
         <AlertDialogOverlay>
           <AlertDialogContent>
             <AlertDialogHeader>
-              Delete &quot;{event?.title} &quot;
+              Delete &quot;{blog?.title} &quot;
             </AlertDialogHeader>
             <AlertDialogBody>
               Are you sure? You can&quot;t undo this action afterwards.
@@ -114,7 +114,7 @@ function Delete() {
               <Button ref={leastRef} onClick={onClose}>
                 Cancel
               </Button>
-              <Button colorScheme="red" onClick={deleteEvent} ml={3}>
+              <Button colorScheme="red" onClick={deleteblogPost} ml={3}>
                 Delete
               </Button>
             </AlertDialogFooter>
