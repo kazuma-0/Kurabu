@@ -30,6 +30,14 @@ const links = [
     label: "blog",
     url: "/blog",
   },
+  {
+    label: "Vision and Mission",
+    url: "/vision-and-mission",
+  },
+  {
+    label: "Action plans",
+    url: "/action-plans",
+  },
 ];
 
 function NavigationBar() {
@@ -46,8 +54,8 @@ function NavigationBar() {
             "cursor-pointer flex justify-around w-full lg:w-fit space-x-5 items-center"
           }
         >
-          <img src={metaverse.src} className={"h-24"} alt="" />
-          <img src={kaheLogo.src} className={"h-16"} alt="" />
+          {/* <img src={metaverse.src} className={"h-24"} alt="" /> */}
+          <img src={kaheLogo.src} className={"h-20"} alt="" />
         </div>
       </Link>
       <div className="lg:flex space-x-8 hidden">

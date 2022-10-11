@@ -10,20 +10,20 @@ import { IconX } from "@tabler/icons";
 
 const clubs = [
   {
-    name: "ARVR Club",
+    name: "AR/VR Club",
     description:
-      "The AR VR club is a student-run club that indulges in activities related to augmented reality and virtual reality. The club was started with the aim of providing students with a platform to explore and experiment with these technologies. The club organizes various events and workshops related to AR and VR, and also hosts guest lectures from industry experts. The club provides its members with an opportunity to learn about the latest trends in the field of AR and VR, and also allows them to network with like-minded individuals.",
+      "The AR/VR club is a student-run club that indulges in activities related to augmented reality and virtual reality. The club was started with the aim of providing students with a platform to explore and experiment with these technologies. The club organizes various events and workshops related to AR and VR, and also hosts guest lectures from industry experts. The club provides its members with an opportunity to learn about the latest trends in the field of AR and VR, and also allows them to network with like-minded individuals.",
     image: arvr,
     contact: [
       {
-        name: "Pradish",
-        department: "AIDS - III year",
-        email: "pradish.26@gmail.com",
+        name: "Anuj S",
+        department: "CSD - II year",
+        email: "hello@kazuma.in",
       },
       {
-        name: "Yosuva",
+        name: "Sanjay B",
         department: "AIDS - III year",
-        email: "pradish.26@gmail.com",
+        email: "sanjaychandar2002@gmail.com",
       },
     ],
   },
@@ -34,87 +34,33 @@ const clubs = [
     image: blockchain,
     contact: [
       {
-        name: "Pradish",
+        name: "Pradish Pranam",
         department: "AIDS - III year",
-        email: "pradish.26@gmail.com",
+        email: "pradish2125@gmail.com",
       },
       {
-        name: "Yosuva",
+        name: "Yosuva B E",
         department: "AIDS - III year",
-        email: "pradish.26@gmail.com",
+        email: "yosuvabe.26@gmail.com",
       },
     ],
   },
   {
-    name: "Datascience club",
+    name: "Data Science club",
     description:
       "Ideologies is to create the perfect path to success in the Data Science industry for aspiring students. Students can engage in a wide range of activities in a data science club. Working with real data sets to learn cleaning, displaying, and analysing data might be one exercise. Various software applications or programming languages could be used for this. Discussing case studies of successful or unsuccessful data science projects could be another pastime. As a result, club members would be able to learn from the achievements and mistakes of others in the industry. Clubs could also have guest speakers who are professionals in data science to impart their wisdom to students. Lastly, groups could participate in online contests centred on using data analysis to solve real-world problems.",
     image: datascience,
     contact: [
       {
-        name: "Pradish",
+        name: "Loga prakash",
         department: "AIDS - III year",
-        email: "pradish.26@gmail.com",
+        email: "loga@loga.com",
       },
-      {
-        name: "Yosuva",
-        department: "AIDS - III year",
-        email: "pradish.26@gmail.com",
-      },
-    ],
-  },
-  {
-    name: "Entrepreneurship club",
-    description:
-      "All aspiring campus entrepreneurs get a platform thanks to the Entrepreneurship Club. Reputable businesspeople are known to attend the tech talks and seminars that are often held there.",
-    image: datascience,
-    contact: [
-      {
-        name: "Pradish",
-        department: "AIDS - III year",
-        email: "pradish.26@gmail.com",
-      },
-      {
-        name: "Yosuva",
-        department: "AIDS - III year",
-        email: "pradish.26@gmail.com",
-      },
-    ],
-  },
-  {
-    name: "Photography club",
-    description:
-      "The members of the Photography Club work together to envision, record, and freeze a moment while generating beauty. No event is complete without a series of wonderful pictures capturing every moment of joy and happiness.",
-    image: datascience,
-    contact: [
-      {
-        name: "Pradish",
-        department: "AIDS - III year",
-        email: "pradish.26@gmail.com",
-      },
-      {
-        name: "Yosuva",
-        department: "AIDS - III year",
-        email: "pradish.26@gmail.com",
-      },
-    ],
-  },
-  {
-    name: "Women empowerment",
-    description:
-      "The globe, as well as our patriarchal nation, has to learn lessons. in realising the actual wonder that women are, and in appreciating their power. recognise that advancing women is equivalent to achieving equality We make amends for the wrongs and endeavour to prevent any more from occurring. We implore you to join the Women Empowerment Club and fight alongside us if you support the rights and equality of both sexes.",
-    image: datascience,
-    contact: [
-      {
-        name: "Pradish",
-        department: "AIDS - III year",
-        email: "pradish.26@gmail.com",
-      },
-      {
-        name: "Yosuva",
-        department: "AIDS - III year",
-        email: "pradish.26@gmail.com",
-      },
+      // {
+      //   name: "Yosuva",
+      //   department: "AIDS - III year",
+      //   email: "pradish.26@gmail.com",
+      // },
     ],
   },
   // {
@@ -177,19 +123,21 @@ export default function Home() {
             </span>
           </div>
           <p className="text-lg pt-3 text-justify max-w-lg">
-            The Karpagam academy of higher education Research and Development
-            Club is called The Metaverse community. People in KAHE are
-            passionate about innovation and technology. In sectors like
-            artificial intelligence and machine learning, blockchain, AR/VR,
-            computer technology, along with app and web development, we
-            brainstorm and explore initiatives that are pertinent to today&aposs
-            industry.
+            The department of Computer Science and Engineering and Faculty of
+            Engineering has an Research and development club called The
+            Metaverse Community. The students in Karpagam Academy of Higher
+            Education are passionate about innovation and technology in sectors
+            of Artificial Intelligence and Machine learning, Blockchain,
+            Augumented reality and Virtual reality, Mobile and Web application
+            development. The metaverse community&apos;s objective is to
+            brainstorm and explore initiative that are pertinent to today&apos;s
+            industry standard.
           </p>
         </div>
         <Programmer className={"lg:scale-150 flex-[.3]"} />
       </Center>
       <LayoutGroup>
-        <div className="grid lg:grid-cols-3 py-10 pb-20 gap-4">
+        <div id="clubs" className="grid lg:grid-cols-3 py-10 pb-20 gap-4">
           {clubs.map((club) => (
             <motion.div
               layoutId={club.name}
@@ -235,7 +183,7 @@ export default function Home() {
                     <Center className={"col-span-2 w-full"}>
                       <img
                         src={selectedClub?.image.src}
-                        className={"lg:col-span-2 rounded p-1"}
+                        className={"lg:col-span-2 rounded-lg shadow p-1"}
                         alt=""
                       />
                     </Center>

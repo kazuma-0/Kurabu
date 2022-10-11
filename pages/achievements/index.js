@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import { frontendClient } from "../../client";
 import { useEffect, useState } from "react";
 import { Center, Text } from "@chakra-ui/react";
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
-import { IconStar } from "@tabler/icons";
 
 function Achievements() {
   const [achievements, setAchievements] = useState();
