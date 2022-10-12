@@ -32,9 +32,9 @@
     src: url("../assets/fonts/Droid Sans Mono Regular.ttf");
     font-family: "Droid Sans";
 }
-/*.font-ligurino{*/
-/*    font-family: Ligurino, serif;*/
-/*}*/
+.font-ligurino{
+    font-family: Ligurino, serif;
+}
 
 /*.font-droid{*/
 /*    font-family: "Droid Sans", monospace;*/
