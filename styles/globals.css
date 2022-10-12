@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,16 +19,26 @@
 }
 
 @font-face {
+    src: url("../assets/fonts/Sofia Pro Regular.ttf");
+    font-family: Sofia;
+}
+
+@font-face {
+    src: url("../assets/fonts/Sofia Pro Bold.ttf");
+    font-family: "Sofia Bold";
+}
+
+@font-face {
     src: url("../assets/fonts/Droid Sans Mono Regular.ttf");
     font-family: "Droid Sans";
 }
-.font-ligurino{
-    font-family: Ligurino, serif;
-}
+/*.font-ligurino{*/
+/*    font-family: Ligurino, serif;*/
+/*}*/
 
-.font-droid{
-    font-family: "Droid Sans", monospace;
-}
+/*.font-droid{*/
+/*    font-family: "Droid Sans", monospace;*/
+/*}*/
 
 .h-cover{
     min-height: calc(100vh - var(--height));
@@ -47,4 +59,8 @@
         /*transform: scaleX(0) perspective(1000px) scale3d(0, 0 1);*/
         transform: scaleX(100%);
     }
+}
+
+body{
+    font-family: 'Rubik', serif !important;
 }
