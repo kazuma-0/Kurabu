@@ -57,9 +57,9 @@ const clubs = [
                 email: "loga@loga.com",
             },
             {
-              name: "Ramkumar P",
-              department: "AIDS - III year",
-              email: "ramkumarpasupathi@gmail.com",
+                name: "Ramkumar P",
+                department: "AIDS - III year",
+                email: "ramkumarpasupathi@gmail.com",
             },
         ],
     },
@@ -119,20 +119,19 @@ export default function Home() {
                     <div
                         className="text-4xl font-extrabold font-ligurino lg:text-left pt-5 lg:text-6xl tracking-wide uppercase">
                         the{" "}
-                        <span className="text-[#f4f1d0] text-center selection:text-[#101014] tracking-wider  selection:bg-[#f4f1d0]">
+                        <span
+                            className="text-[#f4f1d0] text-center selection:text-[#101014] tracking-wider  selection:bg-[#f4f1d0]">
               metaverse community
             </span>
                     </div>
                     <p className="text-lg pt-3 text-justify max-w-lg font-sofia">
-                        The department of Computer Science and Engineering and Faculty of
-                        Engineering has an Research and development club called The
-                        Metaverse Community. The students in Karpagam Academy of Higher
-                        Education are passionate about innovation and technology in sectors
-                        of Artificial Intelligence and Machine learning, Blockchain,
-                        Augmented reality and Virtual reality, Mobile and Web application
-                        development. The metaverse community&apos;s objective is to
-                        brainstorm and explore initiative that are pertinent to today&apos;s
-                        industry standard.
+                        The department of Computer Science and Engineering and Faculty of Engineering has a Research and
+                        development club called The Metaverse Community. The students at Karpagam Academy of Higher
+                        Education are passionate about innovation and technology in the sectors of Artificial
+                        Intelligence and Machine learning, Blockchain, Augmented reality and Virtual reality, Mobile and
+                        Web application development. The metaverse community&apos;s objective is to brainstorm and
+                        explore
+                        initiatives that are pertinent to today&apos;s industry standards.
                     </p>
                 </div>
                 <Programmer className={"lg:scale-150 flex-[.3]"}/>
