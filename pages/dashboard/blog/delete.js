@@ -16,7 +16,7 @@ import {
 import { IconTrash } from "@tabler/icons";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { checkUser } from "../../../utils";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
 function Delete() {
   const { connected, publicKey } = useWallet();

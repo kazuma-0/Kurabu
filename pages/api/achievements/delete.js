@@ -7,11 +7,14 @@ export default async function handler(req, res) {
     return;
   }
   try {
-    const { statusText } = await backendClient.delete(`/achievement/${req.body.id}`, {
-      headers: {
-        auth: req.body.pubKey,
-      },
-    });
+    const { statusText } = await backendClient.delete(
+      `/achievement/${req.body.id}`,
+      {
+        headers: {
+          auth: req.body.pubKey,
+        },
+      }
+    );
     res.status(200).json(statusText);
   } catch (e) {
     res.status(401).json("Unauthorized");

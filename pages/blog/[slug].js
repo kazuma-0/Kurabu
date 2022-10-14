@@ -32,7 +32,9 @@ function Blog() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await frontendClient.get(`/api/blog/blog?slug=${slug}`);
+        const { data } = await frontendClient.get(
+          `/api/blog/blog?slug=${slug}`
+        );
         setBlog(data);
       } catch (e) {
         console.error(e);

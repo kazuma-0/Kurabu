@@ -24,8 +24,7 @@ function EventCard(props) {
           {dayjs
             .unix(Math.floor(Date.parse(props.post.created_at) / 1000))
             .fromNow()}
-            {
-            }
+          {}
         </h3>
       </div>
       <div className={" p-2"}>

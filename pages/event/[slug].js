@@ -32,7 +32,9 @@ function Event() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await frontendClient.get(`/api/event/event?slug=${slug}`);
+        const { data } = await frontendClient.get(
+          `/api/event/event?slug=${slug}`
+        );
         setEvent(data);
       } catch (e) {
         console.error(e);

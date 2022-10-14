@@ -63,9 +63,7 @@ function NavigationBar() {
           return (
             <div
               key={link.label}
-              className={
-                "text-md uppercase tracking-wide font-rubik"
-              }
+              className={"text-md uppercase tracking-wide font-rubik"}
             >
               <Link href={link.url} scroll={false}>
                 {link.label}

@@ -6,7 +6,7 @@ function Footer() {
     <Container
       id={"footer"}
       maxW={"container.lg"}
-        className={"py-5 text-xs font-sans "}
+      className={"py-5 text-xs font-sans "}
     >
       <div className="flex items-center justify-between pb-5">
         <div>

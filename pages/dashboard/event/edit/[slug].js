@@ -37,7 +37,9 @@ function EventEdit() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await frontendClient.get(`/api/event/event?slug=${slug}`);
+        const { data } = await frontendClient.get(
+          `/api/event/event?slug=${slug}`
+        );
         setEvent(data);
         console.log(data);
         const keys = Object.keys(data);
