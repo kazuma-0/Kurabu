@@ -7,7 +7,7 @@ function BlogViewer(props) {
   const [blogPosts, setBlogPosts] = useState(null);
   useEffect(() => {
     async function fetchBlogPosts() {
-      const { data } = await frontendClient.get("achievements/all");
+      const { data } = await frontendClient.get("/api/achievements/all");
       setBlogPosts(data);
       console.log(data);
     }

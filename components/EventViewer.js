@@ -6,7 +6,7 @@ function EventViewer(props) {
   const [events, setEvents] = useState(null);
   useEffect(() => {
     async function fetchEvents() {
-      const { data } = await frontendClient.get("event/all");
+      const { data } = await frontendClient.get("/api/event/all");
       setEvents(data);
       console.log(data);
     }

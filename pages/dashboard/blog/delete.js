@@ -16,11 +16,12 @@ import {
 import { IconTrash } from "@tabler/icons";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { checkUser } from "../../../utils";
+import {useRouter} from "next/router";
 
 function Delete() {
   const { connected, publicKey } = useWallet();
   const [user, setUser] = useState(null);
-
+  const router = useRouter();
   useEffect(() => {
     if (!connected && publicKey) {
       router.push("/auth");
@@ -38,7 +39,7 @@ function Delete() {
   const [blogPosts, setBlogPosts] = useState(null);
 
   async function fetchBlogPosts() {
-    const { data } = await frontendClient.get("blog/all");
+    const { data } = await frontendClient.get("/api/blog/all");
     setBlogPosts(data);
   }
 
@@ -54,7 +55,7 @@ function Delete() {
 
   async function deleteblogPost() {
     try {
-      const { status } = await frontendClient.post("blog/delete", {
+      const { status } = await frontendClient.post("/api/blog/delete", {
         id: blog.id,
         pubKey: publicKey.toBase58(),
       });

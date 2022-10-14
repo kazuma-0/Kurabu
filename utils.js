@@ -1,7 +1,7 @@
 import {frontendClient} from "./client";
 
 function checkUser(publicKey, setUser) {
-    frontendClient.post('/getUser', {
+    frontendClient.post('/api/getUser', {
         pubKey: publicKey?.toBase58()
     }).then(({data}) => {
         setUser(data);

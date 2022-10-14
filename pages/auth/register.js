@@ -84,7 +84,7 @@ function Register() {
   const validateInviteCode = useCallback(async () => {
     setLoading(true);
     try {
-      const { data } = await frontendClient.post("/validate-invite", {
+      const { data } = await frontendClient.post("/api/validate-invite", {
         code: code,
       });
       setValid(true);

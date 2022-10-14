@@ -32,7 +32,7 @@ function Blog() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await frontendClient.get(`blog/blog?slug=${slug}`);
+        const { data } = await frontendClient.get(`/api/blog/blog?slug=${slug}`);
         setBlog(data);
       } catch (e) {
         console.error(e);
@@ -67,7 +67,6 @@ function Blog() {
               <IconHeart
                 color={like.liked ? "red" : "white"}
                 fill={like.liked ? "red" : "white"}
-                siz
               />
               <p className={"pl-1 text-xl"}>{like.count}</p>
             </div>

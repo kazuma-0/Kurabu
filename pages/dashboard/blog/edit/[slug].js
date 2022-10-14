@@ -37,7 +37,7 @@ function BlogEdit() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await frontendClient.get(`blog/blog?slug=${slug}`);
+        const { data } = await frontendClient.get(`/api/blog/blog?slug=${slug}`);
         setBlogPost(data);
         console.log(data);
         const keys = Object.keys(data);
@@ -72,7 +72,7 @@ function BlogEdit() {
   async function onSubmit() {
     try {
       const { data } = await frontendClient.post(
-        "/blog/update",
+        "/api/blog/update",
         {
           ...{ ...blogPost, ...formState },
         },

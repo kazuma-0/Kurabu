@@ -38,7 +38,7 @@ function Delete() {
   const [events, setEvents] = useState(null);
 
   async function fetchEvents() {
-    const { data } = await frontendClient.get("event/all");
+    const { data } = await frontendClient.get("/api/event/all");
     setEvents(data);
   }
 

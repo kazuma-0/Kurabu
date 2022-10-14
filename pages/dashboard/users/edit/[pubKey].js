@@ -47,7 +47,7 @@ function EditUser() {
   useEffect(() => {
     if (publicKey) {
       frontendClient
-        .post("/getUser", {
+        .post("/api/getUser", {
           pubKey: pubKey,
           auth: publicKey,
         })
@@ -80,7 +80,7 @@ function EditUser() {
     setLoading(true);
     try {
       const { data } = await frontendClient.post(
-        "/updateUser",
+        "/api/updateUser",
         {
           ...user,
           ...formState,
@@ -112,7 +112,7 @@ function EditUser() {
   async function deleteUser() {
     try {
       await frontendClient.post(
-        "/deleteUser",
+        "/api/deleteUser",
         {
           id: user.id,
         },

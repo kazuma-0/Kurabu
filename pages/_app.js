@@ -36,7 +36,9 @@ function MyApp({ Component, pageProps, router }) {
                 <Component {...pageProps}></Component>
               </div>
             </Container>
+              <div className={"bg-[#16171d]/50 ring-1 ring-white/30"}>
             <Footer />
+              </div>
           </ChakraProvider>
         </WalletModalProvider>
       </WalletProvider>

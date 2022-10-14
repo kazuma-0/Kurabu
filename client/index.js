@@ -5,6 +5,6 @@ const backendClient = axios.create({
 });
 const frontendClient = axios.create({
   // baseURL: "http://localhost:3001/api",
-    baseURL: "https://www.csemetaverse.com/api"
+//    baseURL: "/api"
 });
 export { backendClient, frontendClient };

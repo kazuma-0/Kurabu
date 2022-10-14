@@ -47,7 +47,6 @@ function Newblog() {
   const [formState, dispatch] = useReducer(BlogFormReducer, initialBlogForm);
 
   const dispatcher = useCallback((e) => {
-    console.log(e.target.value);
     dispatch({
       type: e.target.name,
       field: e.target.name,
@@ -72,7 +71,7 @@ function Newblog() {
 
   async function onSubmit() {
     try {
-      const { data } = await frontendClient.post("/blog/new", {
+      const { data } = await frontendClient.post("/api/blog/new", {
         ...formState,
       });
       toast({

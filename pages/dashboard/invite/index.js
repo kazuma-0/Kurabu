@@ -36,7 +36,7 @@ function Invite() {
 
   const fetchInviteCodes = useCallback(async () => {
     try {
-      const { data } = await frontendClient.get("/invite/codes", {
+      const { data } = await frontendClient.get("/api/invite/codes", {
         headers: {
           pubKey: publicKey?.toBase58(),
         },
@@ -49,7 +49,7 @@ function Invite() {
   }, [publicKey]);
   const generateInviteCodes = useCallback(async () => {
     try {
-      await frontendClient.post("/invite/generate-invites", {
+      await frontendClient.post("/api/invite/generate-invites", {
         auth: publicKey?.toBase58(),
         count: count,
       });

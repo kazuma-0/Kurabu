@@ -29,7 +29,7 @@ function Users() {
 
   async function getAllUsers() {
     try {
-      const { data } = await frontendClient.get("users", {
+      const { data } = await frontendClient.get("/api/users", {
         headers: {
           pubKey: publicKey.toBase58(),
         },

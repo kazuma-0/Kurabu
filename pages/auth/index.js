@@ -14,7 +14,7 @@ function Login() {
 
   async function onWalletConnected() {
     try {
-      const { data } = await frontendClient.post("login", {
+      const { data } = await frontendClient.post("/api/login", {
         pubKey: publicKey,
       });
       if (!toast.isActive(1)) {
