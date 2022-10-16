@@ -13,7 +13,9 @@ function Footer() {
           <img src={metaverse.src} width="100px" alt="" />
         </div>
         <div className="max-w-lg text-sm space-y-1">
-            <h2 className={"text-xl tracking-wider font-bold font-sofia"}>Department of Computer Science and Engineering (FOE)</h2>
+          <h2 className={"text-xl tracking-wider font-bold font-sofia"}>
+            Department of Computer Science and Engineering (FOE)
+          </h2>
           <p className="text-lg">KARPAGAM ACADEMY OF HIGHER EDUCATION</p>
           <p>(Deemed to be University)</p>
           <p>
