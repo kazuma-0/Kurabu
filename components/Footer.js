@@ -6,19 +6,20 @@ function Footer() {
     <Container
       id={"footer"}
       maxW={"container.lg"}
-      className={"py-5 text-xs font-sans "}
+      className={"py-5 text-xs font-sans items-center "}
     >
       <div className="flex items-center justify-between pb-5">
         <div>
           <img src={metaverse.src} width="100px" alt="" />
         </div>
         <div className="max-w-lg text-sm space-y-1">
-          <p className="text-2xl">KARPAGAM ACADEMY OF HIGHER EDUCATION</p>
+            <h2 className={"text-xl tracking-wider font-bold font-sofia"}>Department of Computer Science and Engineering (FOE)</h2>
+          <p className="text-lg">KARPAGAM ACADEMY OF HIGHER EDUCATION</p>
           <p>(Deemed to be University)</p>
           <p>
-            (Established Under Section 3 of UGC Act, 1956) Pollachi Main Road,
+            {/*(Established Under Section 3 of UGC Act, 1956) Pollachi Main Road,*/}
           </p>
-          <p>Eachanari Post, Coimbatore - 641 021, Tamil Nadu, India.</p>
+          {/*<p>Eachanari Post, Coimbatore - 641 021, Tamil Nadu, India.</p>*/}
         </div>
       </div>
       {/* ©️{" "}

@@ -39,7 +39,7 @@ function Delete() {
   const [blogPosts, setBlogPosts] = useState(null);
 
   async function fetchBlogPosts() {
-    const { data } = await frontendClient.get("/api/blog/all");
+    const { data } = await frontendClient.get("/api/achievements/all");
     setBlogPosts(data);
   }
 
@@ -55,7 +55,7 @@ function Delete() {
 
   async function deleteblogPost() {
     try {
-      const { status } = await frontendClient.post("/api/blog/delete", {
+      const { status } = await frontendClient.post("/api/achievements/delete", {
         id: blog.id,
         pubKey: publicKey.toBase58(),
       });

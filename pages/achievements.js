@@ -1,8 +1,8 @@
-import AcheivementViewer from "../components/AchievementViewer";
+import AchievementViewer from "../components/AchievementViewer";
 import { useRouter } from "next/router";
 
 function Events() {
-  return <AcheivementViewer link={"/achievement/"} />;
+  return <AchievementViewer link={"/achievement/"} />;
 }
 
 export default Events;

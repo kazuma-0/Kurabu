@@ -1,17 +1,16 @@
 import { frontendClient } from "../client";
 import AchievementCard from "./AchievementCard";
 import { useEffect, useState } from "react";
-import BlogCard from "./BlogCard";
 
-function BlogViewer(props) {
+function AchievementViewer(props) {
   const [blogPosts, setBlogPosts] = useState(null);
   useEffect(() => {
-    async function fetchBlogPosts() {
+    async function fetchAchievement() {
       const { data } = await frontendClient.get("/api/achievements/all");
       setBlogPosts(data);
       console.log(data);
     }
-    fetchBlogPosts();
+    fetchAchievement();
   }, []);
   return (
     <div className={"h-cover"}>
@@ -24,4 +23,4 @@ function BlogViewer(props) {
   );
 }
 
-export default BlogViewer;
+export default AchievementViewer;

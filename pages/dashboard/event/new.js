@@ -72,7 +72,7 @@ function NewEvent() {
 
   async function onSubmit() {
     try {
-      const { data } = await frontendClient.post("/api/event/new", {
+      const { data } = await frontendClient.post("/event/new", {
         ...formState,
       });
       toast({

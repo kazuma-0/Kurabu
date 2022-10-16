@@ -33,7 +33,7 @@ function Achievement() {
     async function fetchData() {
       try {
         const { data } = await frontendClient.get(
-          `/api/achievement/achievement?slug=${slug}`
+          `/api/achievements/achievement?slug=${slug}`
         );
         setAchievement(data);
       } catch (e) {
