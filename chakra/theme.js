@@ -10,27 +10,7 @@ const styles = {
     }),
 };
 
-const components = {
-//     Drawer: {
-//         // setup light/dark mode component defaults
-//         baseStyle: props => ({
-//             dialog: {
-//                 bg: mode('white', '#141214')(props),
-//             },
-//         }),
-//     },
-//     Alert: {
-//         variants:{
-//             solid:{
-//                 bg:"black"
-//             },
-//             leftAccent:{
-//                 bg:"black !important"
-//             }
-//         }
-//
-//     },
-};
+const components = {};
 
 const theme = extendTheme({
     components,

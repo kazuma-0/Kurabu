@@ -65,7 +65,7 @@ function Newblog() {
         duration: 1e3,
       });
       setTimeout(() => {
-        router.push(`/blog/${data.slug}`);
+        router.push(`/achievement/${data.slug}`);
       }, 1e3);
     } catch (e) {
       console.log(e);

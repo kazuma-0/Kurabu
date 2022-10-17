@@ -117,7 +117,7 @@ function Register() {
   async function signUp() {
     setLoadingSignUp(true);
     try {
-      const { data } = await frontendClient.post("/sign-up", {
+      const { data } = await frontendClient.post("/api/sign-up", {
         name: formState.name,
         department: formState.department,
         branch: formState.branch,

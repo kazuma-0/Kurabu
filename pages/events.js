@@ -1,8 +1,13 @@
 import EventViewer from "../components/EventViewer";
-import { useRouter } from "next/router";
+import Head from 'next/head'
 
 function Events() {
-  return <EventViewer link={"/event/"} />;
+  return <>
+  <Head>
+      <title>Events</title>
+  </Head>
+  <EventViewer link={"/event/"} />
+  </>;
 }
 
 export default Events;

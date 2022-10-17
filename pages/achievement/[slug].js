@@ -69,7 +69,6 @@ function Achievement() {
               <IconHeart
                 color={like.liked ? "red" : "white"}
                 fill={like.liked ? "red" : "white"}
-                siz
               />
               <p className={"pl-1 text-xl"}>{like.count}</p>
             </div>
