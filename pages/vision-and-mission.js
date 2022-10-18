@@ -12,20 +12,7 @@ function VisionMission() {
               <p className="py-4 text-xl text-justify leading-relaxed">
                   <ul className="list-disc px-4">
                       <li>
-                          Clubs for students serve as the major centre for student activities.
-                          They provide youthful minds and emotions a platform and an outlet
-                          for their creative energies.
-                      </li>
-                      <li>
-                          The clubs provide you the chance to put what you learn in class to
-                          use outside of the classroom. You get priceless leadership and life
-                          skills as a result.
-                      </li>
-                      <li>
-                          Students&apos; clubs allow them to communicate with alumni and
-                          professionals in their fields of interest in addition to linking
-                          them with other students who share those interest in AR/VR,
-                          Blockchain and Data Science
+                          To provide students with top-notch advanced technical training, they may become dedicated, well-prepared technology experts with cutting-edge research talents, ethical standards, and moral principles.
                       </li>
                   </ul>
               </p>
@@ -35,15 +22,10 @@ function VisionMission() {
               <p className="py-4 text-xl text-justify leading-relaxed">
                   <ul className="list-disc px-4">
                       <li>
-                          Clubs and organizations improve your experience, foster a varied
-                          community, promote participation, and offer chances for students to
-                          develop important skills in AR/VR, Blockchain and Data Science. This
-                          aids in the development of formal and informal networks as you look
-                          into career options.
+                          Train students in the fundamentals and current technological advancements in Computer Science and Engineering, such as AR/VR, Data Science and Blockchain Technology.
                       </li>
                       <li>
-                          These groups, which are open to all students, plan activities,
-                          gatherings, and events all during the academic year.
+                          Pursue creative and innovative research ideas and Projects in Computer science specialization to serve the needs of Industry and Society with integrity, ethical and moral values
                       </li>
                   </ul>
               </p>
