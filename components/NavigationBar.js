@@ -21,10 +21,6 @@ const links = [
         label: "Vision and Mission",
         url: "/vision-and-mission",
     },
-//  {
-//    label: "achievements",
-//    url: "/achievements",
-//  },
     {
         label: "Collaboration",
         url: "/collaboration"
@@ -50,34 +46,60 @@ const links = [
 function NavigationBar() {
     const router = useRouter();
     return (
-        <Container
-            id={"nav"}
-            maxW={"container.xl"}
-            className={"h-28 flex justify-between items-center"}
-        >
-            <Link href={"/"}>
-                <div
-                    className={
+            <Container
+                id={"nav"}
+                maxW={"container.xl"}
+                className={"h-28 flex justify-between items-center"}
+                >
+                <Link href={"/"}>
+                    <div
+                        className={
                         "cursor-pointer flex justify-around w-full lg:w-fit space-x-5 items-center"
                     }
-                >
-                    {/* <img src={metaverse.src} className={"h-24"} alt="" /> */}
-                    <img src={kaheLogo.src} className={"h-20"} alt=""/>
-                </div>
-            </Link>
-            <div className="lg:flex space-x-6 hidden">
-                {links.map((link) => {
-                    return (
-                        <div
-                            key={link.label}
-                            className={"text-md hover:scale-[101%] transition-all uppercase tracking-wide font-rubik"}
                         >
-                            <Link href={link.url} scroll={false}>
-                                {link.label}
-                            </Link>
-                        </div>
-                    );
+                        {/* <img src={metaverse.src} className={"h-24"} alt="" /> */}
+                        <img src={kaheLogo.src} className={"h-20"} alt=""/>
+                    </div>
+                </Link>
+                <div className="lg:flex space-x-6 hidden">
+                    {links.map(x=>x).splice(0, 2).map((link) => {
+                        return (
+                                <div
+                                    key={link.label}
+                                    className={"text-md hover:scale-[101%] transition-all uppercase tracking-wide font-rubik"}
+                                    >
+                                    <Link href={link.url} scroll={false}>
+                                        {link.label}
+                                    </Link>
+                                </div>
+                                );
+                    })}
+                    <div>
+                        <Menu bgColor="#16171d">
+                            <MenuButton className="uppercase">Collaboration</MenuButton>
+                            <MenuList className={"!bg-[#16171d]"}>
+                                <MenuItem>
+                                    <Link href="/collaboration/industrial">Industrial</Link>
+                                </MenuItem>
+                                <MenuItem>
+                                    <Link href="/collaboration/academic">Academic</Link>
+                                </MenuItem>
+                            </MenuList>
+                        </Menu>
+                    </div>
+                    {links.map(x=>x).splice(3).map((link) => {
+                    return (
+                            <div
+                                key={link.label}
+                                className={"text-md hover:scale-[101%] transition-all uppercase tracking-wide font-rubik"}
+                                >
+                                <Link href={link.url} scroll={false}>
+                                    {link.label}
+                                </Link>
+                            </div>
+                            );
                 })}
+
             </div>
             <div className="lg:hidden rounded-full  z-50 fixed bottom-5 right-5">
                 {/* Menu button with links */}
