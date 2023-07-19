@@ -21,7 +21,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>The Metaverse Club</title>
+                <title>The Metaverse Association</title>
             </Head>
             <div ref={ref}>
                 <Center
@@ -32,15 +32,15 @@ export default function Home() {
                             the{" "}
                             <span
                                 className="text-[#f4f1d0] text-center selection:text-[#101014] tracking-wider  selection:bg-[#f4f1d0]">
-                            metaverse club
+                            metaverse association
                         </span>
                         </div>
                         <p className="text-lg pt-3 text-justify max-w-lg font-sofia">
                             The department of Computer Science and Engineering in Faculty of Engineering has a
-                            Research and development club called The Metaverse Club. The Karpagam Academy of Higher
+                            Research and development club called The Metaverse Association. Karpagam Academy of Higher
                             Education students are passionate about innovation and technology in Artificial Intelligence
                             and Machine learning, Blockchain, Augmented reality and Virtual reality, and Mobile and Web
-                            application development. The metaverse club aims to brainstorm and explore initiatives
+                            application development. The Metaverse club aims to brainstorm and explore initiatives
                             pertinent to today&apos;s industry standards.
                         </p>
                     </div>
@@ -110,7 +110,7 @@ export default function Home() {
                                                         className={
                                                             "absolute top-0 right-0 cursor-pointer rounded"
                                                         }
-                                                        onClick={() => setSelectedClub(null)}
+                                                        onClick={() => setSelected(null)}
                                                     />
                                                 </div>
                                                 <p
@@ -118,11 +118,11 @@ export default function Home() {
                                                         "text-justify max-w-xl py-10 text-lg leading-relaxed"
                                                     }
                                                 >
-                                                    {selectedClub?.description}
+                                                    {selected?.description}
                                                 </p>
                                                 <h2 className={"text-xl font-bold pb-3"}>Contact</h2>
                                                 <div className={"grid lg:grid-cols-2"}>
-                                                    {selectedClub?.contact.map((contact) => {
+                                                    {selected?.contact.map((contact) => {
                                                         return (
                                                             <div key={contact.name}>
                                                                 <div className={""}>{contact.name}</div>
